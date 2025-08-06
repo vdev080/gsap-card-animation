@@ -15,9 +15,11 @@
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <style>
-    .hp-banner-section { padding: 100px 0; background: #f5f5f5;height: 85rem; }
+    .hp-banner-section { padding: 100px 0; background: #f5f5f5;height: 100vh; }
     .container { width: 90%; margin: 0 auto; }
-    .hp-banner-cards { list-style: none; display: flex; gap: 2rem; padding: 0;margin-top: -13rem; }
+    .hp-banner-cards { list-style: none; display: flex; gap: 2rem; padding: 0;position: absolute;
+  left: 40%;
+  top: 60%; }
     .hp-banner-card { width: 20vw; position: absolute;left: 38%; }
     .hp-banner-card img { width: 100%; display: block; }
     .txt { text-align: center; margin-top: 10px; }
@@ -48,12 +50,12 @@
   display: inline-block; /* Center h2 properly for transform animations */
   position: relative;
 }
-	  @media(max-width: 1370px) {
+@media(max-width: 1370px) {
 .heading-box h1 {
   font-size: 5rem;
 }
 .heading-box h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 }
     @media(max-width: 1024px) {
@@ -140,12 +142,12 @@
         ease: "power3.out",
       })
       .to(".heading-box h2 .right", {
-        x: -250,
+        x: "-15rem",
         duration: 0.8,
         ease: "power3.out",
       })
       .to(".heading-box h2 .left", {
-        x: 300,
+        x: "17rem",
         duration: 0.8,
         ease: "power3.out",
       }, "-=0.8")
@@ -187,7 +189,7 @@
             x: "0vw",
           },
           {
-            y: "23vw",
+            y: "17vw",
             rotate: 0,
             x: adjustedX[i],
             duration: 6,
@@ -225,5 +227,3 @@
 
 </body>
 </html>
-
-
